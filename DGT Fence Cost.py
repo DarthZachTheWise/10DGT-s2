@@ -57,7 +57,7 @@ while keep_going == "":                                                         
         negitive_area_error = fence_perimeter_error - (gate_number * gate_length)                   # This code calculates if the gates will take up more length than the whole fence.
         
         if negitive_area_error < 0:                                                                 # Gives error message if the length of the gates is bigger then the length of the fence. 
-            print("\nYou Have added more gates then the fence length allows.")
+            print("\nYou Have added more gates than the fence length allows.")
             
 
         else:   
