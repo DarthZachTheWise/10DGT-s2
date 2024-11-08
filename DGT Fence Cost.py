@@ -6,8 +6,8 @@
 
 # defs for the code. The first is for floats and the second is for int. 
 def vaild_number(question): 
-    error_zero_negitive = "\nYour responce is an invalid number."
-    value_error = "\nYour responce is an invalid number."
+    error_zero_negitive = "\nPLease enter a number bigger than 0."
+    value_error = "\nPlease input a number."
     while True:
         try:
             response = float(input(question))
@@ -20,8 +20,8 @@ def vaild_number(question):
     return response
 
 def vaild_int(question):
-    error_zero_negitive = "Your responce is an invalid number."
-    value_error = "Your responce is an invalid number."
+    error_zero_negitive = "\nPlease enter 0 or a positive integer."
+    value_error = "\nPlease enter a number."
     while True:
         try:
             response = int(input(question))
