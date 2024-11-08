@@ -6,8 +6,8 @@
 
 # defs for the code. The first is for floats and the second is for int. 
 def vaild_number(question): 
-    error_zero_negitive = "\nPLease enter a number bigger than 0."
-    value_error = "\nPlease input a number."
+    error_zero_negitive = "\nPLease enter a number bigger than 0.\n"
+    value_error = "\nPlease input a number.\n"
     while True:
         try:
             response = float(input(question))
@@ -20,8 +20,8 @@ def vaild_number(question):
     return response
 
 def vaild_int(question):
-    error_zero_negitive = "\nPlease enter 0 or a positive integer."
-    value_error = "\nPlease enter a number."
+    error_zero_negitive = "\nPlease enter 0 or a positive integer.\n"
+    value_error = "\nPlease enter a integer.\n"
     while True:
         try:
             response = int(input(question))
@@ -33,20 +33,20 @@ def vaild_int(question):
             print(value_error)
     return response
 
-print("\nThis is a program that will calculate the cost of a rectangular fence.")                     # Tell the user what the program does
+print("\nThis is a program that will calculate the cost of a rectangular fence.\n")                     # Tell the user what the program does
 keep_going = ""                                                                                     # Keep_going is the varable that allows the user to break out of the loop
                                                                                                     
 while keep_going == "":                                                                             # Starts the while loop. This is the main section of the code. 
 
-    fence_length = vaild_number("\n\nWhat is the length of the fence in meters?\n")                     # Asks the user for the dimention and cost of the fence per meter.
+    fence_length = vaild_number("\nWhat is the length of the fence in meters?\n")                     # Asks the user for the dimention and cost of the fence per meter.
     fence_width = vaild_number("\nWhat is the width of the fence in meters?\n")                       
-    fence_cost = vaild_number("\nWhat is the cost of the fence per meter?\n$")
+    fence_cost = vaild_number("\nWhat is the cost of the fence per meters?\n$")
     
     gate_number = vaild_int("\nHow many gates does the fence have?\n")                               # Asks the user how many gates their fence has. If there are zero fences the code will skip the rest of the gate question. 
     
     if  gate_number > 0:                                                                            # If the number of gates that are in bigger than zero than it will go through this if statement. 
         gate_cost = vaild_number("\nHow much does your gate cost?\n$")                                # Asks the user for the cost and length of the fence. 
-        gate_length = vaild_number("\nWhat is the length of the gate(s)? \n")                             
+        gate_length = vaild_number("\nWhat is the length of the gate(s) in meters? \n")                             
 
         
 
@@ -57,12 +57,12 @@ while keep_going == "":                                                         
         negitive_area_error = fence_perimeter_error - (gate_number * gate_length)                   # This code calculates if the gates will take up more length than the whole fence.
         
         if negitive_area_error < 0:                                                                 # Gives error message if the length of the gates is bigger then the length of the fence. 
-            print("\nYou Have added more gates than the fence length allows.")
+            print("\nYou have added more gates than the fence length allows.\n___________________________________________________________________________________________")
             
 
         else:   
             print (f"\nThe total cost of the fence will be ${fence_total_cost_gate} including the cost of the gates.")         # Tells the user the total cost of the total. 
-            keep_going = input("\nWhat you like to go again? If so than press <enter> otheriwse click any other key to stop.") # Asks the user if they would like to loop. 
+            keep_going = input("\nWould you like to go again? If so than press <enter> otheriwse click any other key to stop.") # Asks the user if they would like to loop. 
             print("___________________________________________________________________________________________")
     
     else:                                                                                                                    # This is the code that doesn't give the user questions about the gates. 
@@ -70,5 +70,5 @@ while keep_going == "":                                                         
         fence_total_cost_nogate = (fence_perimeter_nogate * fence_cost)                                                      # Finds the cost of the fence not including the gates. 
 
         print(f"The total cost of your fence is ${fence_total_cost_nogate}.")                                                # Tells the user the total fence cost. 
-        keep_going = input("What you like to go again? If so than press <enter> otheriwse click any other key to stop.")    # Asks the user if they want the code go again. 
+        keep_going = input("Would you like to go again? If so than press <enter> otheriwse click any other key to stop.")    # Asks the user if they want the code go again. 
         print("___________________________________________________________________________________________")
