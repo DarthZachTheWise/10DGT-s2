@@ -33,7 +33,7 @@ while keep_going == "":
         
         # This if statment tells the user to input text and it will calculate the amount of bits in the text by counting the amount of charictor and timeing them by 8. 
         
-        text_bit = len(input("\nWrite in the text that you want to calculate the number of bits that it uses.\nThe calculation will only be accurate if you use ascii charictors\n"))* 8
+        text_bit = len(input("\nWrite in the text that you want to calculate the number of bits that it uses.\nThe calculation will only be accurate if you use ascii charictors\n"))* 8  
         print(f"\nThe number of bits that are in the text are {text_bit}")
         keep_going = input("\nIf you would like to do another calculation press <enter>. If not press any other key.")
 
